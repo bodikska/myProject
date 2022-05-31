@@ -1,0 +1,49 @@
+.loader-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: 3;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+}
+.preloader::before {
+    content: "";
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 5px solid black;
+    border-top-color: cornflowerblue;
+    transform: translate(-50%, -50%);
+}
+.preloader {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 5px solid black;
+    border-bottom-color: aqua;
+    transform: translate(-50%, -50%);
+    animation: preload 1s infinite ease;
+}
+.done {
+    opacity: 0;
+    visibility: hidden;
+}
+@keyframes preload {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg); 
+    }
+}
+ 
