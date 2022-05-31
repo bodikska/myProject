@@ -1,0 +1,45 @@
+.place_clock {
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 400px;
+    width: 400px;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+.place_clock::before {
+    content: "";
+    position:absolute;
+    right: 50%;
+    background-color: wheat;
+    height: 200px;
+    width: 2px;
+    transform-origin: 0 100%;
+    animation: clockSeconds 60s infinite steps(60);
+}
+@keyframes clockSeconds {
+    0% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.place_clock::after {
+    content: "";
+    position:absolute;
+    right: 50%;
+    background-color: black;
+    height: 200px;
+    width: 4px;
+    transform-origin: 0 100%;
+    animation: clockMinut 3600s infinite steps(3600);
+}
+@keyframes clockMinut {
+    0% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
