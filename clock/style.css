@@ -1,10 +1,28 @@
-.place_clock {
+.clock {
+    background-color:blueviolet;
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
     margin: 0 auto;
+    padding: 20px;
     margin-top: 20px;
+
+
+}
+.place_clock {
+    position: relative;
+
     height: 400px;
     width: 400px;
+    margin: 0 auto;
     background-color: blueviolet;
     border-radius: 50%;
+    border: 1px solid;
+    box-shadow:  5px 5px 8px #002766,
+    -5px -5px 10px wheat;
+
 }
 .place_clock::before {
     content: "";
@@ -16,14 +34,7 @@
     transform-origin: 0 100%;
     animation: clockSeconds 60s infinite steps(60);
 }
-@keyframes clockSeconds {
-    0% {
-        transform: rotate(0deg);
-    } 
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 .place_clock::after {
     content: "";
     position:absolute;
@@ -33,6 +44,14 @@
     width: 4px;
     transform-origin: 0 100%;
     animation: clockMinut 3600s infinite steps(3600);
+}
+@keyframes clockSeconds {
+    0% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
 }
 @keyframes clockMinut {
     0% {
