@@ -1,0 +1,52 @@
+body {
+    background-color: darkslategrey;
+}
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 10px;
+}
+form::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 37px;
+    height: 13px;
+    border-radius: 99em;
+    left: -4px;
+    top: 30%; 
+    border: 1px solid #ccc;
+    transform: rotate(90deg);
+}
+input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+label {
+    font-style: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+    color: #ccc;
+}
+
+label~label {
+    margin-top: 5px;
+}
+label::first-letter {
+    color: transparent;
+
+}
+input:checked+label::first-letter {
+    color: deepskyblue;
+}
