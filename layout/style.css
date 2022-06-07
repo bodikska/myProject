@@ -137,7 +137,7 @@ body {
       z-index: 1;
   }
 
-  .about__us {
+  .bg_Img {
       min-height: 2200px;
     background-image: url(img/Image\ bg.png);
     z-index: 0;
@@ -203,8 +203,9 @@ body {
   .description__text p {
       margin-top: 20px;
   }
-  .description__btn {
+  .btn {
       background-color: #00C9E0;
+      color: white;
       width: 285px;
       height: 65px;
       text-align: center;
@@ -214,7 +215,7 @@ body {
       margin-top: 50px;
       /* position: relative; */
   }
-  .description__btn::after {
+  .description__btn::after, .btn__readmore::after {
     content: "";
     display: block;
     position: relative;
@@ -288,5 +289,68 @@ body {
  position: relative;
  left: 500px;
  top: 180px;
+}
+.about__us {
+    display: flex;
+    justify-content: space-evenly;
+}
+.about__us h4 {
+    font-size: 68px;
+      margin-bottom: 30px;
+      margin-top: 50px;
+      color: white;
+}
 
+.text__Content {
+    width: 320px;
+}
+.text__Content p {
+    color: white;
+    font-size: 18px;
+}
+.text__Content p:nth-child(4), .text__Content p:nth-child(6) {
+    opacity: 0.5;
+}
+.img__content {
+    width: 800px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.img__content img {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    height: 400px;
+}
+.img__content::after {
+    content: url(img/Dots_2.png);
+    position: relative;
+    bottom: 650px;
+    left: 800px;
+}
+.thoughts {
+    margin-top: 250px;
+    background-color: #011627;
+}
+.thoughts h2 {
+    font-size: 72px;
+    text-align: center;
+    color: white;
+    margin-bottom: 35px;
+}
+.thoughts > p {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+.colection__throughts {
+    display: flex;
+    justify-content: space-evenly;
+    /* grid-template-columns: 500px; */
+}
+.all__Colectrion {
+    background-color: #02223B;
+    width: 500px;
+    height: 500px;
 }
