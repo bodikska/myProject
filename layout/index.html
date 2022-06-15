@@ -16,8 +16,17 @@
             <div class="logo__menu content">
                 <div class="logo">NT</div>
                 <div class="menu">
-                    <ion-icon name="search-outline"></ion-icon>
-                    <div class="btn_menu">Menu</div>
+                    <div class="search">
+                        <input type="text" name="search" class="place__search" placeholder="search...">
+                        <div class="btn__search">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="btn_menu">Menu
+                        <div class="menu__block">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="page__heading">
@@ -47,10 +56,10 @@
                 </div>
                 <div class="menu__trip content">
                     <ul>
-                        <li>Chill Adventure</li>
-                        <li>Spooky Times</li>
-                        <li>Desert Madness</li>
-                        <li>Out in the wild</li>
+                        <li class="check pick__trip">Chill Adventure</li>
+                        <li class="pick__trip">Spooky Times</li>
+                        <li class="pick__trip">Desert Madness</li>
+                        <li class="pick__trip">Out in the wild</li>
                     </ul>
                 </div>
                 <div class="description">
@@ -203,5 +212,6 @@
         
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
